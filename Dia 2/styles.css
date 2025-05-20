@@ -1,0 +1,36 @@
+body {
+    background-color: #20aca5;
+ 
+}
+
+#cabecera {
+    color: rgb(107, 6, 102);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    background-color: #c433c4;
+    color: #a00993;
+}
+
+ul {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    list-style: none;
+}
+
+li {
+    padding: 10px;
+    background-color: #a00993;
+    color: #fff;
+    border-radius: 5px;
+}
+
+ol {
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+}
