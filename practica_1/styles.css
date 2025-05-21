@@ -1,13 +1,46 @@
-/*2. CSS#
-Aplicarás un background usando el atributo 
-style a la etiqueta <body>, la etiqueta <style>
- dentro de <head> la usaras ara aplicar estilos a las etiquetas
-  <h1> y <p>, y en un archivo externo enlazado con <link> aplicaras el resto de los estilos.
-*/
+*{
+  align-content: center;
+  align-self: center;
+}
+  
+  
   body{ 
-    background-color: aqua;
-    color: blue;
-    font-size: large;
-    width:auto;
-    height: auto;   
+    background-color: rgb(88, 109, 109);
+    color: rgb(168, 49, 49);
+
+
+
+  
+  }
+
+  h1{
+    color: rgb(16, 58, 6);
+    
+  }
+
+  h2{
+    color: rgb(5, 7, 110);
+  }
+
+ /*  h3{
+    color: rgb(47, 170, 30);
+  } */
+
+  p {
+    color: azure;
+  }
+
+
+  .Hobies {
+    color: aqua;
+
+  }
+
+  .Habilidades {
+    color: rgb(12, 24, 184);
+
+  }
+
+  #Redes_sociales {
+    color: rgb(67, 9, 121);
   }
