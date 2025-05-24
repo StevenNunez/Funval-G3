@@ -1,11 +1,15 @@
-/* * {
-    margin:30px 10 px 15px;
-    padding: 30px 55px 60px 70px;
-    border: 30px 30px 15px 10px;
+ * {
+  
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+
     
 }
- */
-/* .cajon {
+ 
+ .cajon {
 display: flex;
 align-items: center;
 justify-content: center;
@@ -31,12 +35,78 @@ width: 350px;
     padding: 30px 20px 30px 10px;
     margin-left: 15px;
     border: blue 5px solid;
-} */
+} 
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
 table {
     border: solid 2px;
     margin-left: 30;
     border-radius: 8px;
     padding: 8px;
+  
 }
 
+thead th {
+    border: solid;
+    padding: 8px;
+}
+
+tbody td {
+    border: solid;
+    padding: 8px;
+}
+
+#Formulario {
+    background-color: rgb(11, 71, 122);
+    height: 400px;
+    width: 230px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+}
+
+input {
+    padding: 5px;
+}
+
+/* p {
+    margin-right: 100px;
+    text-align: left;
+} */
+
+
+.contenedor-p {
+    display: flex;
+    gap: 90xp;
+}
+
+.contenedor-input {
+    display: flex;
+    gap: 10xp;
+}
+
+.input {
+    width: 100px;
+}
+
+.titulo-formulario {
+    margin-bottom: 50px;
+
+}

@@ -1,0 +1,52 @@
+/* 
+static    es el valor por defecto
+absolute
+fixed
+sticky
+relative
+*/
+
+/* 
+z-index
+elementos q tengan position definida
+elemento q no tengan una position definida
+*/
+/* .caja-1 {
+  position: relative;
+  top: 50px;
+  left: 50px;
+  bottom: 100px;
+  right: 50px;
+}
+
+.caja-2 {
+  position: relative;
+}
+ */
+/* .contenedor {
+  position: relative;
+}
+
+.caja-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+ */
+.contenedor {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+}
+
+.cabecera {
+  position: sticky;
+  top: 1px;
+  z-index: 20;
+}
+.cabecera-2 {
+  position: sticky;
+  top: 50px;
+  z-index: 10;
+}
+
