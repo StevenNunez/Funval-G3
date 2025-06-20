@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Steven</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-[#1A2A44] min-h-screen flex items-center justify-center font-outfit">
+    <div class="container mx-auto px-4 py-8 max-w-md md:max-w-2xl">
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-5xl md:text-6xl text-[#31C3BD]">X</h1>
+            <h2 class="text-5xl md:text-6xl text-[#F2B137]">O</h2>
+            <div class="flex items-center gap-4">
+                <button class="bg-[#A8BFC9] text-[#1A2A44] font-bold py-2 px-4 rounded-lg shadow-md flex items-center gap-2">
+                    <span class="text-2xl">X</span> TURN
+                </button>
+                <button class="bg-[#A8BFC9] text-[#1A2A44] font-bold py-2 px-4 rounded-lg shadow-md flex items-center gap-2">
+                    <span class="text-2xl">↺</span> 
+                </button>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-4 mb-6">
+            <div class="bg-[#1F3641] h-24 md:h-32 rounded-lg shadow-md flex items-center justify-center">
+                <span class="text-5xl md:text-6xl text-[#31C3BD]">X</span>
+            </div>
+            <div class="bg-[#1F3641] h-24 md:h-32 rounded-lg shadow-md flex items-center justify-center">
+                <span class="text-5xl md:text-6xl text-[#F2B137]">O</span>
+            </div>
+            <div class="bg-[#1F3641] h-24 md:h-32 rounded-lg shadow-md flex items-center justify-center"></div>
+            <div class="bg-[#1F3641] h-24 md:h-32 rounded-lg shadow-md flex items-center justify-center"></div>
+            <div class="bg-[#1F3641] h-24 md:h-32 rounded-lg shadow-md flex items-center justify-center"></div>
+            <div class="bg-[#1F3641] h-24 md:h-32 rounded-lg shadow-md flex items-center justify-center"></div>
+            <div class="bg-[#1F3641] h-24 md:h-32 rounded-lg shadow-md flex items-center justify-center"></div>
+            <div class="bg-[#1F3641] h-24 md:h-32 rounded-lg shadow-md flex items-center justify-center"></div>
+            <div class="bg-[#1F3641] h-24 md:h-32 rounded-lg shadow-md flex items-center justify-center"></div>
+        </div>
+        <div class="grid grid-cols-3 gap-4 text-center">
+            <div class="bg-[#31C3BD] p-4 rounded-lg">
+                <p class="text-[#1A2A44] font-medium">X (YOU)</p>
+                <p class="text-white font-bold text-xl">99</p>
+            </div>
+            <div class="bg-[#A8BFC9] p-4 rounded-lg">
+                <p class="text-[#1A2A44] font-medium">TIES</p>
+                <p class="text-white font-bold text-xl">99</p>
+            </div>
+            <div class="bg-[#F2B137] p-4 rounded-lg">
+                <p class="text-[#1A2A44] font-medium">O (CPU)</p>
+                <p class="text-white font-bold text-xl">01</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
