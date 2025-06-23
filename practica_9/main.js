@@ -43,7 +43,7 @@ function manejarClicCelda(e) {
     if (verificarGanador()) {
         juegoActivo = false;
         actualizarPuntaje(jugadorActual);
-        mostrarResultado(${jugadorActual} TAKES TE ROUND, jugadorActual === 'X' ? '¡X WINS!' : '¡O WINS!');
+        mostrarResultado(`${jugadorActual} TAKES THE ROUND`, jugadorActual === 'X' ? '¡X WINS!' : '¡O WINS!');
         return;
     }
 
@@ -59,7 +59,7 @@ function manejarClicCelda(e) {
    
     jugadorActual = jugadorActual === 'X' ? 'O' : 'X';
     indicadorTurno.textContent = jugadorActual;
-    indicadorTurno.parentElement.firstChild.textContent = ${jugadorActual} TURN;
+    indicadorTurno.parentElement.firstChild.textContent = `${jugadorActual} TURN`;
 }
 
 
@@ -84,7 +84,7 @@ function actualizarPuntaje(ganador) {
 function mostrarResultado(mensaje, ganador) {
     mensajeResultado.textContent = mensaje;
     textoGanador.textContent = ganador;
-    textoGanador.className = text-3xl font-bold ${ganador.includes('X') ? 'text-[#31C3BD]' : ganador.includes('O') ? 'text-[#F2B137]' : 'text-[#A8BFC9]'};
+    textoGanador.className = `text-3xl font-bold ${ganador.includes('X') ? 'text-[#31C3BD]' : ganador.includes('O') ? 'text-[#F2B137]' : 'text-[#A8BFC9]'}`;
     modalResultado.classList.remove('hidden');
 }
 
