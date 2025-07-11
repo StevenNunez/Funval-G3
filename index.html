@@ -1,71 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./output.css">
-    <title>Steven</title>
+    <title>Portafolio de Steven</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+            background: linear-gradient(180deg, #1a1a1a 0%, #2d3748 100%);
+        }
+
+        body {
+            background-color: transparent;
+            min-height: 100vh;
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .nav-menu.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #1a1a1a;
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
-<body>
- <header class="w-full bg-gray-800 text-white py-4 px-6 flex items-center justify-between gap-3 sticky top-0 z-10">
-    <div>
-        <img src="../practica_1/imagenes/steven.jpg" alt="Steven Nuñez Profile" class="w-16 h-16 rounded-full">
-    </div>
-    <nav class="hidden md:flex space-x-8">
-        <a href="./practica_1/index.html" class="text-white hover:text-gray-300 transition duration-300">Mis Practicas y trabajos</a>
-    </nav>
-    <button class="cursor-pointer bg-yellow-400 text-black px-4 py-2 rounded-full flex items-center space-x-2 hover:bg-yellow-500 transition duration-300">
-        <span>CONTACT</span>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-        </svg>
-    </button>
-</header>
-    <main>
-        <div>
-            <a href="./dia_2/index.html" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Ejercicio Dia 2</h5>
-            <p class="font-normal text-gray-700 dark:text-gray-400">En este ejercicio aprendimos a.</p>
-            </a>
+
+<body class="antialiased text-gray-200">
+    <div id="particles-js"></div>
+
+    <header
+        class="w-full bg-gray-900 bg-opacity-90 backdrop-blur-sm text-white py-4 px-6 flex items-center justify-between sticky top-0 z-20 shadow-lg">
+        <div class="flex items-center space-x-4">
+            <img src="../practica_1/imagenes/steven.jpg" alt="Foto de perfil de Steven Núñez"
+                class="w-12 h-12 rounded-full border-2 border-yellow-400 object-cover">
+            <span class="font-semibold text-lg">Steven Núñez</span>
         </div>
-                <div>
-            <a href="./practica_1/index.html" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Practica 1</h5>
-            <p class="font-normal text-gray-700 dark:text-gray-400">En esta practica hicimos.</p>
+        <button class="menu-toggle md:hidden text-yellow-400">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+        <nav class="nav-menu md:flex md:space-x-6">
+            <a href="./practica_1/index.html" class="text-gray-300 hover:text-yellow-400 transition duration-300">Mis
+                Prácticas y Trabajos</a>
+        </nav>
+        <a href="mailto:steven@example.com"
+            class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full flex items-center space-x-2 hover:bg-yellow-500 transition duration-300 font-semibold">
+            <span>CONTACTO</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+            </svg>
+        </a>
+    </header>
+
+    <main class="container mx-auto py-12 px-4">
+        <h1 class="text-4xl font-bold text-center mb-12 text-white">Portafolio de Prácticas</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <a href="./dia_2/index.html" class="card block bg-gray-800 bg-opacity-80 rounded-lg shadow-lg p-6">
+                <div class="flex items-center space-x-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-10 h-10 text-yellow-400">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 006 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                    </svg>
+                    <div>
+                        <h5 class="text-2xl font-bold text-white mb-2">Ejercicio Día 2</h5>
+                        <p class="text-gray-400">Creación de una página web estática sobre películas, utilizando HTML y
+                            CSS. Incluye un menú de navegación con géneros, una lista ordenada de un top 10 de películas
+                            y una imagen codificada en base64 para la película 'Cars' con una breve descripción.
+
+                        </p>
+                    </div>
+                </div>
             </a>
-        </div>
-        <div>
-            <div class="space-y-2 p-4 % ">
-                <div>
-                    <a  href="./practica_3/index.html" role="alert" class="bg-green-100 dark:bg-green-900 border-l-4 border-green-500 dark:border-green-700 text-green-900 dark:text-green-100 p-2 rounded-lg flex items-center transition duration-300 ease-in-out hover:bg-green-200 dark:hover:bg-green-800 transform hover:scale-105">
-                    <p class="text-xs font-semibold">Practictica 3</p></a>
+
+
+            <a href="./practica_1/index.html" class="card block bg-gray-800 bg-opacity-80 rounded-lg shadow-lg p-6">
+                <div class="flex items-center space-x-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-10 h-10 text-yellow-400">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L6 12zm0 0h7.5" />
+                    </svg>
+                    <div>
+                        <h5 class="text-2xl font-bold text-white mb-2">Práctica 1</h5>
+                        <p class="text-gray-400">Creación de una página personal estática con HTML y CSS, presentando mi
+                            perfil, hobbies, habilidades y enlaces a redes sociales, con un diseño simple y
+                            estructurado.</p>
+                    </div>
                 </div>
-                <div> 
-                    <a  href="./practica_5/index.html" role="alert" class="bg-blue-100 dark:bg-blue-900 border-l-4 border-blue-500 dark:border-blue-700 text-blue-900 dark:text-blue-100 p-2 rounded-lg flex items-center transition duration-300 ease-in-out hover:bg-blue-200 dark:hover:bg-blue-800 transform hover:scale-105">
-                    <p class="text-xs font-semibold"> Practictica 5</p></a>
+            </a>
+
+            <a href="./practica_2/index.html" class="card block bg-gray-800 bg-opacity-80 rounded-lg shadow-lg p-6">
+                <div class="flex items-center space-x-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-10 h-10 text-yellow-400">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                    <div>
+                        <h5 class="text-2xl font-bold text-white mb-2">Práctica 2</h5>
+                        <p class="text-gray-400">Desarrollo de un formulario de inicio de sesión con HTML y CSS. Incluye
+                            campos para email y contraseña, una casilla de verificación, enlaces a redes sociales y un
+                            diseño responsivo con estilos personalizados.</p>
+                    </div>
                 </div>
-                <div>
-                    <a href="./practica_6/index.html" role="alert" class="bg-yellow-100 dark:bg-yellow-900 border-l-4 border-yellow-500 dark:border-yellow-700 text-yellow-900 dark:text-yellow-100 p-2 rounded-lg flex items-center transition duration-300 ease-in-out hover:bg-yellow-200 dark:hover:bg-yellow-800 transform hover:scale-105">
-                    <p class="text-xs font-semibold">Practictica 6</p></a>
+            </a>
+
+            <a href="./practica_3/index.html" class="card block bg-gray-800 bg-opacity-80 rounded-lg shadow-lg p-6">
+                <div class="flex items-center space-x-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-10 h-10 text-yellow-400">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+                    </svg>
+                    <div>
+                        <h5 class="text-2xl font-bold text-white mb-2">Práctica 3</h5>
+                        <p class="text-gray-400">Creación de una página web estática con HTML y CSS, que incluye un encabezado, un menú de navegación, una sección hero con imagen y botón, una lista de elementos y un pie de página simple.</p>
+                    </div>
                 </div>
-                <div>
-                    <a href="./practica_7/index.html" role="alert" class="bg-red-100 dark:bg-red-900 border-l-4 border-red-500 dark:border-red-700 text-red-900 dark:text-red-100 p-2 rounded-lg flex items-center transition duration-300 ease-in-out hover:bg-red-200 dark:hover:bg-red-800 transform hover:scale-105">
-                    <p class="text-xs font-semibold">Practictica 7</p></a>
+            </a>
+
+
+            <a href="./practica_5/index.html" class="card block bg-gray-800 bg-opacity-80 rounded-lg shadow-lg p-6">
+                <div class="flex items-center space-x-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-10 h-10 text-yellow-400">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25z" />
+                    </svg>
+                    <div>
+                        <h5 class="text-2xl font-bold text-white mb-2">Práctica 5</h5>
+                        <p class="text-gray-400">Calculadora de áreas geométricas desarrollada en JavaScript. Permite calcular el área de un cuadrado, rectángulo o triángulo mediante un menú interactivo con validación de entradas, usando funciones y estructuras de control.</p>
+                    </div>
                 </div>
-                <div>
-                    <a href="./practica_8/index.html" role="alert" class="bg-red-100 dark:bg-red-900 border-l-4 border-red-500 dark:border-red-700 text-red-900 dark:text-red-100 p-2 rounded-lg flex items-center transition duration-300 ease-in-out hover:bg-red-200 dark:hover:bg-red-800 transform hover:scale-105">
-                    <p class="text-xs font-semibold">Practictica 8</p></a>
+            </a>
+
+
+            <a href="./practica_6/index.html" class="card block bg-gray-800 bg-opacity-80 rounded-lg shadow-lg p-6">
+                <div class="flex items-center space-x-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-10 h-10 text-yellow-400">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                    </svg>
+                    <div>
+                        <h5 class="text-2xl font-bold text-white mb-2">Práctica 6</h5>
+                        <p class="text-gray-400">Simulador de cuenta bancaria en JavaScript que permite depositar, retirar y consultar saldo mediante un objeto con métodos. Utiliza un menú interactivo con prompts para la entrada de datos y alertas para mostrar resultados.</p>
+                    </div>
                 </div>
-                <div>
-                    <a href="./practica_9_1/index.html" role="alert" class="bg-red-100 dark:bg-red-900 border-l-4 border-red-500 dark:border-red-700 text-red-900 dark:text-red-100 p-2 rounded-lg flex items-center transition duration-300 ease-in-out hover:bg-red-200 dark:hover:bg-red-800 transform hover:scale-105">
-                    <p class="text-xs font-semibold">Practictica 9</p></a>
+            </a>
+
+
+            <a href="./practica_7/index.html" class="card block bg-gray-800 bg-opacity-80 rounded-lg shadow-lg p-6">
+                <div class="flex items-center space-x-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-10 h-10 text-yellow-400">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <div>
+                        <h5 class="text-2xl font-bold text-white mb-2">Práctica 7</h5>
+                        <p class="text-gray-400">Manipulación de Arrays en JavaScript
+"Uso de métodos de arrays en JavaScript (forEach, map, includes, filter, slice, sort, reverse) para gestionar un listado de productos. Incluye operaciones como mostrar productos, aplicar descuentos, filtrar por precio y ordenar datos, presentados en una interfaz web responsiva.
+
+</p>
+                    </div>
                 </div>
-                <div>
-                    <a href="./practica_10/index.html" role="alert" class="bg-red-100 dark:bg-red-900 border-l-4 border-red-500 dark:border-red-700 text-red-900 dark:text-red-100 p-2 rounded-lg flex items-center transition duration-300 ease-in-out hover:bg-red-200 dark:hover:bg-red-800 transform hover:scale-105">
-                    <p class="text-xs font-semibold">Practictica 10</p></a>
+            </a>
+
+
+            <a href="./practica_8/index.html" class="card block bg-gray-800 bg-opacity-80 rounded-lg shadow-lg p-6">
+                <div class="flex items-center space-x-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-10 h-10 text-yellow-400">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <div>
+                        <h5 class="text-2xl font-bold text-white mb-2">Práctica 8</h5>
+                        <p class="text-gray-400">Diseño de una interfaz estática para un juego de Tic Tac Toe utilizando HTML y Tailwind CSS. Incluye un tablero interactivo, indicadores de turno y un panel de puntajes con un diseño responsivo y moderno.
+
+</p>
+                    </div>
                 </div>
-            </div>
+            </a>
+
+
+            <a href="./practica_9_1/index.html" class="card block bg-gray-800 bg-opacity-80 rounded-lg shadow-lg p-6">
+                <div class="flex items-center space-x-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-10 h-10 text-yellow-400">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                    </svg>
+                    <div>
+                        <h5 class="text-2xl font-bold text-white mb-2">Práctica 9</h5>
+                        <p class="text-gray-400">Desarrollo de un juego interactivo de Tic Tac Toe usando HTML, Tailwind CSS y JavaScript. Incluye una cuadrícula de 3x3, seguimiento de turnos, puntajes para jugadores (X, O y empates), y modales para mostrar resultados y reiniciar el juego.</p>
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="./practica_10/index.html" class="card block bg-gray-800 bg-opacity-80 rounded-lg shadow-lg p-6">
+                <div class="flex items-center space-x-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-10 h-10 text-yellow-400">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A2.25 2.25 0 0116.5 7.5v6.75a2.25 2.25 0 01-2.25 2.25h-1.5a2.25 2.25 0 01-2.25-2.25V7.5a2.25 2.25 0 012.148-2.352L14.25 3.75m0 0l3 3" />
+                    </svg>
+                    <div>
+                        <h5 class="text-2xl font-bold text-white mb-2">Práctica 10</h5>
+                        <p class="text-gray-400">Desarrollo de una página web que consume datos de una API pública para mostrar una lista de usuarios en tarjetas. Utiliza HTML, Tailwind CSS para estilos responsivos y JavaScript con fetch para manejar solicitudes asíncronas, incluyendo gestión de errores.</p>
+                    </div>
+                </div>
+            </a>
         </div>
     </main>
+
+    <footer class="bg-gray-800 w-full py-6 text-center text-white">
+        <div class="container mx-auto">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://github.com/StevenNunez" target="_blank"
+                    class="text-gray-300 hover:text-yellow-400 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/steven-nu%C3%B1ez/" target="_blank"
+                    class="text-gray-300 hover:text-yellow-400 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25h12A2.25 2.25 0 0020.25 18v-1.5M16.5 8.25h-9M6.75 8.25v12M9 12.75h6.75M9 15.75h4.5" />
+                    </svg>
+                </a>
+            </div>
+            <p>© 2025 Steven Núñez. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: window.innerWidth < 768 ? 40 : 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: { type: "circle", stroke: { width: 0 } },
+                opacity: { value: 0.4, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.3, width: 1 },
+                move: { enable: true, speed: 1.5, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true }
+            },
+            retina_detect: true
+        });
+
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>
